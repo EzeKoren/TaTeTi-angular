@@ -1,0 +1,9 @@
+<h1>Le toca a {{player}}</h1>
+<button (click)="newGame()">Nuevo juego</button>
+<h2 *ngIf="winner">Ganó {{winner}}</h2>
+<main>
+	<ficha *ngFor="let val of squares; let i = index" 
+			[value]="val"
+			(click)="makeMove(i)">
+	</ficha>
+</main>
